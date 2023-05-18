@@ -5,7 +5,7 @@ interface IHeading {
   className?: string;
 }
 
-const Heading: FC = ({ title, className }) => {
+const Heading: FC<IHeading> = ({ title, className }) => {
   return (
     <h1
       className={`text-white text-opacity-80 font-semibold ${

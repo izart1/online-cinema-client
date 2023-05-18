@@ -4,6 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import Button from '@/components/ui/form-elements/Button';
 import Heading from '@/components/ui/heading/Heading';
 
+import { useActions } from '@/hooks/useActions';
 import { useAuth } from '@/hooks/useAuth';
 
 import Meta from '@/utils/meta/Meta';
@@ -28,12 +29,8 @@ const Auth: FC = () => {
     mode: 'onChange',
   });
 
-  const login = (data: any) => {
-    console.log(data);
-  };
-  const register = (data: any) => {
-    console.log(data);
-  };
+  const { login, register } = useActions();
+
   const onSubmit: SubmitHandler<IAuthInput> = (data) => {
     if (type === 'login') login(data);
     else if (type === 'register') register(data);
