@@ -1,12 +1,14 @@
+import { IActorEditInput } from '@/components/screens/admin/actor/actor-edit.interface';
+
 import { IActor } from '@/shared/types/movie.types';
 
 import { getActorsUrl } from '@/config/api.config';
 
 import axios, { axiosClassic } from '@/api/interceptors';
-import { IActorEditInput } from '@/components/screens/admin/actor/actor-edit.interface';
 
 export const ActorService = {
   async getAllActors(searchTerm?: string) {
+    debugger;
     return axiosClassic.get<IActor[]>(getActorsUrl(''), {
       params: searchTerm ? { searchTerm } : {},
     });
