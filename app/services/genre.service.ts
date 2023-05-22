@@ -12,13 +12,19 @@ export const GenreService = {
       params: searchTerm ? { searchTerm } : {},
     });
   },
+
   async getByIdGenre(_id: string) {
     return axios.get<IGenreEditInput>(getGenresUrl(`/${_id}`));
+  },
+
+  async createGenre() {
+    return axios.post<string>(getGenresUrl('/'));
   },
 
   async updateGenre(_id: string, data: IGenreEditInput) {
     return axios.put<string>(getGenresUrl(`/${_id}`), data);
   },
+
   async deleteGenre(_id: string) {
     return axios.delete<string>(getGenresUrl(`/${_id}`));
   },

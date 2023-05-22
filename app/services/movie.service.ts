@@ -1,3 +1,5 @@
+import { IMovieEditInput } from '@/components/screens/admin/movie/movie-edit.interface';
+
 import { IMovie } from '@/shared/types/movie.types';
 
 import { getMoviesUrl } from '@/config/api.config';
@@ -16,6 +18,15 @@ export const MovieService = {
       getMoviesUrl('/most-popular')
     );
     return movies;
+  },
+  async getByIdMovie(_id: string) {
+    return axios.get<IMovieEditInput>(getMoviesUrl(`/${_id}`));
+  },
+  async updateMovie(_id: string, data: IMovieEditInput) {
+    return axios.put<string>(getMoviesUrl(`/${_id}`), data);
+  },
+  async createMovie() {
+    return axios.post<string>(getMoviesUrl('/'));
   },
 
   async deleteMovie(_id: string) {
