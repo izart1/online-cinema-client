@@ -34,7 +34,11 @@ const ActorEdit: FC = () => {
     <Meta>
       <AdminNavigation />
       <Heading title="Edit actor" />
-      <form onSubmit={handleSubmit(onSubmit)} className={formStyles.form}>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className={formStyles.form}
+        autoComplete="off"
+      >
         {isLoading ? (
           <SkeletonLoader count={3} />
         ) : (

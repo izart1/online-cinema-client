@@ -42,7 +42,11 @@ const GenreEdit: FC = () => {
     <Meta>
       <AdminNavigation />
       <Heading title="Edit genre" />
-      <form onSubmit={handleSubmit(onSubmit)} className={formStyles.form}>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className={formStyles.form}
+        autoComplete="off"
+      >
         {isLoading ? (
           <SkeletonLoader count={3} />
         ) : (

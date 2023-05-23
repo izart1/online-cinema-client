@@ -44,7 +44,11 @@ const MovieEdit: FC = () => {
     <Meta>
       <AdminNavigation />
       <Heading title="Edit movie" />
-      <form onSubmit={handleSubmit(onSubmit)} className={formStyles.form}>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className={formStyles.form}
+        autoComplete="off"
+      >
         {isLoading ? (
           <SkeletonLoader count={3} />
         ) : (

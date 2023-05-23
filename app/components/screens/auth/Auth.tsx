@@ -40,7 +40,7 @@ const Auth: FC = () => {
   return (
     <Meta title="Auth">
       <section className={styles.wrapper}>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
           <Heading title="Auth" className="mb-6" />
 
           <AuthFields
