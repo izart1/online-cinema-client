@@ -8,10 +8,13 @@ import axios, { axiosClassic } from '@/api/interceptors';
 
 export const ActorService = {
   async getAllActors(searchTerm?: string) {
-    debugger;
     return axiosClassic.get<IActor[]>(getActorsUrl(''), {
       params: searchTerm ? { searchTerm } : {},
     });
+  },
+
+  async getActorsBySlug(slug: string) {
+    return axiosClassic.get<IActor>(getActorsUrl(`/by-slug/${slug}`));
   },
   async getByIdActor(_id: string) {
     return axios.get<IActorEditInput>(getActorsUrl(`/${_id}`));

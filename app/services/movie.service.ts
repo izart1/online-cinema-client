@@ -19,6 +19,21 @@ export const MovieService = {
     );
     return movies;
   },
+
+  async getMovieByGenres(genreIds: string[]) {
+    return axiosClassic.post<IMovie[]>(getMoviesUrl(`/by-genres`), {
+      genreIds,
+    });
+  },
+
+  async getMovieByActor(actorId: string) {
+    return axiosClassic.get<IMovie[]>(getMoviesUrl(`/by-actor/${actorId}`));
+  },
+   
+  async getMovieBySlug(slug: string) {
+    return axiosClassic.get<IMovie>(getMoviesUrl(`/by-slug/${slug}`));
+  },
+
   async getByIdMovie(_id: string) {
     return axios.get<IMovieEditInput>(getMoviesUrl(`/${_id}`));
   },
