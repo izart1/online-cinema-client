@@ -45,6 +45,7 @@
     "react-redux": "^8.0.5",
     "react-redux-toastr": "^7.6.11",
     "react-select": "^5.7.3",
+    "react-star-rating-component": "^1.4.1",
     "react-transition-group": "^4.4.5",
     "sass": "^1.62.1",
     "string-strip-html": "^8.5.0",
@@ -57,6 +58,7 @@
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/js-cookie": "^3.0.3",
     "@types/react-redux-toastr": "^7.6.2",
+    "@types/react-star-rating-component": "^1.4.1",
     "prettier": "^2.8.8"
   }
 }

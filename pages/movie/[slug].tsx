@@ -17,7 +17,6 @@ export interface IMoviePage {
 }
 
 const MoviePage: NextPage<IMoviePage> = ({ similarMovies, movie }) => {
-  debugger;
   return movie ? (
     <SingleMovie movie={movie} similarMovies={similarMovies || []} />
   ) : (
