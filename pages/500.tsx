@@ -6,10 +6,10 @@ import Meta from '@/utils/meta/Meta';
 
 const Error500 = () => {
   return (
-    <Meta>
+    <Meta title="Error 500">
       <Heading title="500 Internal Server Error" />
     </Meta>
   );
 };
 
-export default Error404;
+export default Error500;

@@ -12,7 +12,7 @@ import { getMovieUrl } from '@/config/url.config';
 import Error404 from '../404';
 
 export interface IMoviePage {
-  movie: IMovie | undefined;
+  movie: IMovie | undefined | any;
   similarMovies: IGalleryItem[];
 }
 
@@ -63,6 +63,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         similarMovies,
         movie,
       },
+      revalidate: 60,
     };
   } catch (error) {
     return {

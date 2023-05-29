@@ -22,7 +22,7 @@ const UserEdit: FC = () => {
   const { isLoading, onSubmit } = useUserEdit(setValue);
 
   return (
-    <Meta>
+    <Meta title="User edit">
       <AdminNavigation />
       <Heading title="Edit user" />
       <form

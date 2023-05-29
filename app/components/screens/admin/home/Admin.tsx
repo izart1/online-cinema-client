@@ -10,7 +10,7 @@ import Statistics from './Statistics/Statistics';
 
 const Admin: FC = () => {
   return (
-    <Meta>
+    <Meta title="Admin">
       <AdminNavigation />
       <Heading title="Statistics" />
       <Statistics />

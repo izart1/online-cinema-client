@@ -6,7 +6,7 @@ import Meta from '@/utils/meta/Meta';
 
 const Error404 = () => {
   return (
-    <Meta>
+    <Meta title="404 Error">
       <Heading title="404 Page Not Found" />
     </Meta>
   );

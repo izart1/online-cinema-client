@@ -31,7 +31,7 @@ const ActorEdit: FC = () => {
   const { isLoading, onSubmit } = useActorEdit(setValue);
 
   return (
-    <Meta>
+    <Meta title="Actor edit">
       <AdminNavigation />
       <Heading title="Edit actor" />
       <form

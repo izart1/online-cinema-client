@@ -41,7 +41,7 @@ const MovieEdit: FC = () => {
   const { isLoading: isActorsLoading, data: actors } = useAdminActors();
 
   return (
-    <Meta>
+    <Meta title="Movie edit">
       <AdminNavigation />
       <Heading title="Edit movie" />
       <form

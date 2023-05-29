@@ -22,11 +22,9 @@ const PopularMovies: FC = () => {
     </div>
   ) : (
     <MovieList
-      list={{
-        link: '/trending',
-        movies: popularMovies || [],
-        title: 'Popular movies',
-      }}
+      link="/trending"
+      movies={popularMovies || []}
+      title="Popular movies"
     />
   );
 };

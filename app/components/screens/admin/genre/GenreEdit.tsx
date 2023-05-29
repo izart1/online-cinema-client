@@ -39,7 +39,7 @@ const GenreEdit: FC = () => {
   const { isLoading, onSubmit } = useGenreEdit(setValue);
 
   return (
-    <Meta>
+    <Meta title='Genre edit'>
       <AdminNavigation />
       <Heading title="Edit genre" />
       <form

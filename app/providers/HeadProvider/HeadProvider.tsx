@@ -6,7 +6,11 @@ import { accentColor } from '@/config/constants';
 
 import Favicons from './Favicons';
 
-const HeadProvider: FC = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const HeadProvider: FC<Props> = ({ children }) => {
   return (
     <>
       <NextProgressBar
